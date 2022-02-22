@@ -8,7 +8,7 @@ import TodoItem from "./components/TodoItem";
 
 
 const todos=[
-  {text:"hablar con mama", completed:false},
+  {text:"hablar con mama", completed:true},
   {text:"Curso Platzi", completed:false},
   {text:"Ir al Gym", completed:false},
 ]
