@@ -4,8 +4,11 @@ body {
   font-family: 'Audiowide', 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  color:dimgray;
-  background-color: lightyellow;
+  color: #d3d3d3;
+  background-color:rgb(34,159,195);
+  background: linear-gradient(0deg, rgba(34,159,195,1) 0%, rgba(79,45,253,1) 100%);
+  max-width: 580px;
+  margin: 0 a;
 
 }
 

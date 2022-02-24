@@ -1,8 +1,12 @@
 .TodoCounter{
     font-size: 25px;
+    text-transform:capitalize;
+    letter-spacing: 2px;
     text-align: center;
-    margin:0;
-    padding: 50px;
-  
+    margin: 40px 0 40px;
+    padding: 25px;
+    border: 2px solid rgb(34,159,195);
+    border-radius: 25px;
+   
 
 }
