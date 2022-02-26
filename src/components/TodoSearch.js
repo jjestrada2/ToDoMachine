@@ -1,11 +1,8 @@
 import React from 'react';
 import './TodoSearch.css';
 
-function TodoSearch() {
-//Create state to save va;ue of the input
-const[searchValue,setSearchValue]=React.useState('');
-  
-  
+function TodoSearch({searchValue,setSearchValue}) {
+    
   const onSearchValueChange=(event)=>{
     console.log(event.target.value);
     setSearchValue(event.target.value);
@@ -18,9 +15,7 @@ const[searchValue,setSearchValue]=React.useState('');
       placeholder="Enter Task" 
       value={searchValue}
       onChange={onSearchValueChange}/>
-  ,
-
-  <p>{searchValue}</p>
+  
 ]
   
 }
