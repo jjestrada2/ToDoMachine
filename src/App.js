@@ -8,7 +8,7 @@ import TodoItem from "./components/TodoItem";
 
 
 const defaultTodos=[
-  {text:"hablar con mama", completed:true},
+  {text:"hablar con mama", completed:false},
   {text:"Curso Platzi", completed:true},
   {text:"Ir al Gym", completed:false},
 ]
@@ -34,8 +34,26 @@ function App() {
     const searchText = searchValue.toLowerCase();
     return todoText.includes(searchText);
   });
-  
+  //function to check Todos
+  const onCompletTodos=(text)=>{
+    //search the index of the todo 
+    const todoIndex=todos.findIndex(todo=>todo.text===text);
+    //create a new array of todos that storage a copy of the original array of todos
+    const newTodos=[...todos];
+    //modifi the new array to a cmoplete todo
+    newTodos[todoIndex].completed=true;
+    //rerender the new todoArray with the changes 
+    setTodos(newTodos);
+  }
 
+
+  //function to delete todos is almost the same function of onCompleteTodos
+  const onDeleteTodos=(text)=>{
+    const todoindex=todos.findIndex(todo=>todo.text===text);
+    const newTodos=[...todos];
+    newTodos.splice(todoindex,1)
+    setTodos(newTodos);
+  }
 
   return (
     //ReactFragment lo utilizo para envolver todos los componentes ya que react solo permite pasar un componenete componente
@@ -57,6 +75,8 @@ function App() {
           key={todo.text}
           text={todo.text}
           completed={todo.completed}
+          onComplete={()=>onCompletTodos(todo.text)}
+          onDelete={()=>onDeleteTodos(todo.text)}
           />
         ))}
       
