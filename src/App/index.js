@@ -2,12 +2,27 @@ import React from "react";
 import AppUI from "./AppUI";
 //import './App.css';
 
-
-const defaultTodos=[
+/*
+const =[
   {text:"hablar con mama", completed:false},
   {text:"Curso Platzi", completed:true},
   {text:"Ir al Gym", completed:false},
-]
+]*/
+
+//localStorageTodos is a text "STRING"
+const localStorageTodos=localStorage.getItem('TODOS_V1');
+//ParseTodos is the array to send for default 
+let parsedTodos;
+//If the user is new 
+if(!localStorageTodos){
+//establish a empty array for TODOS_V1 
+  localStorage.setItem('TODOS_V1','[]');
+//so parseTodos that is our deafult Todo List is empty
+  parsedTodos=[];
+}else{
+  parsedTodos=JSON.parse(localStorageTodos);
+}
+
 
 function App() {
 
@@ -15,7 +30,7 @@ function App() {
   const[searchValue,setSearchValue]=React.useState('');
 
   //ceate state for Tdods
-  const [todos,setTodos]=React.useState(defaultTodos);
+  const [todos,setTodos]=React.useState(parsedTodos);
 
   //constant of completed todos
   const completedTodos= todos.filter(todo=>todo.completed).length;
@@ -30,6 +45,17 @@ function App() {
     const searchText = searchValue.toLowerCase();
     return todoText.includes(searchText);
   });
+
+  const saveTodos =(newTodos)=>{
+    //Transform array in text
+    const stringfiedTodos=JSON.stringify(newTodos);
+    //save in local storage
+    localStorage.setItem('TODOS_V1',stringfiedTodos);
+    //update the estate of the todoArray
+    setTodos(newTodos)
+
+  }
+
   //function to check Todos
   const onCompletTodos=(text)=>{
     //search the index of the todo 
@@ -39,7 +65,7 @@ function App() {
     //modifi the new array to a cmoplete todo
     newTodos[todoIndex].completed=true;
     //rerender the new todoArray with the changes 
-    setTodos(newTodos);
+    saveTodos(newTodos);
   }
 
 
@@ -48,7 +74,7 @@ function App() {
     const todoindex=todos.findIndex(todo=>todo.text===text);
     const newTodos=[...todos];
     newTodos.splice(todoindex,1)
-    setTodos(newTodos);
+    saveTodos(newTodos);
   }
 
   return (
