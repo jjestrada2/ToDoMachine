@@ -9,28 +9,55 @@ const =[
   {text:"Ir al Gym", completed:false},
 ]*/
 
+//custom Hook
+function useLocalStorage(itemName,initialValue){
+
 //localStorageTodos is a text "STRING"
-const localStorageTodos=localStorage.getItem('TODOS_V1');
-//ParseTodos is the array to send for default 
-let parsedTodos;
+const localStorageItem=localStorage.getItem(itemName);
+//ParseItem is the array to send for default 
+let parsedItem;
 //If the user is new 
-if(!localStorageTodos){
-//establish a empty array for TODOS_V1 
-  localStorage.setItem('TODOS_V1','[]');
-//so parseTodos that is our deafult Todo List is empty
-  parsedTodos=[];
+if(!localStorageItem){
+//establish a empty array for Item_V1 
+  localStorage.setItem(itemName,JSON.stringify(initialValue));
+//so parseItem that is our deafult Todo List is empty
+  parsedItem=[];
 }else{
-  parsedTodos=JSON.parse(localStorageTodos);
+  parsedItem=JSON.parse(localStorageItem);
+}
+
+const [item,setItem]=React.useState(parsedItem);
+
+
+const saveItem =(newItem)=>{
+  //Transform array in text
+  const stringfiedItem=JSON.stringify(newItem);
+  //save in local storage
+  localStorage.setItem(itemName,stringfiedItem);
+  //update the estate of the todoArray
+  setItem(newItem);
+
+}
+
+return [
+  item,
+  saveItem,
+]
 }
 
 
+
+
 function App() {
+
+  //Coonsume custom hook
+  const [todos,saveTodos]=useLocalStorage('TODOS_V1',[]);
 
   //Create state to save va;ue of the input
   const[searchValue,setSearchValue]=React.useState('');
 
   //ceate state for Tdods
-  const [todos,setTodos]=React.useState(parsedTodos);
+ 
 
   //constant of completed todos
   const completedTodos= todos.filter(todo=>todo.completed).length;
@@ -46,15 +73,7 @@ function App() {
     return todoText.includes(searchText);
   });
 
-  const saveTodos =(newTodos)=>{
-    //Transform array in text
-    const stringfiedTodos=JSON.stringify(newTodos);
-    //save in local storage
-    localStorage.setItem('TODOS_V1',stringfiedTodos);
-    //update the estate of the todoArray
-    setTodos(newTodos)
-
-  }
+  
 
   //function to check Todos
   const onCompletTodos=(text)=>{
