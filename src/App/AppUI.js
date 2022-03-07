@@ -7,6 +7,8 @@ import TodoItem from "../components/TodoItem";
 
 export default function AppUI(
     {
+    loading,
+    error,
     completedTodos,
     totalTodos,
     searchValue,
@@ -31,6 +33,10 @@ export default function AppUI(
        />
          
        <TodoList >
+          {error&&<p>Error</p>}
+          {loading&&<p>Loading wait a minute</p>}
+          {(!loading && !searchedTodos.length )&&<p>Creat your first todo</p>}
+
          {searchedTodos.map(todo =>(
            <TodoItem 
            key={todo.text}
