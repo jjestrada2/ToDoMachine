@@ -14,8 +14,6 @@ const =[
 
 
 function App() {
-  
-
 
   return (
     <TodoProvider>

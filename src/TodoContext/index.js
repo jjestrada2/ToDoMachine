@@ -17,6 +17,10 @@ function TodoProvider(props){
   //Create state to save va;ue of the input
   const[searchValue,setSearchValue]=React.useState('');
 
+//Create State for Modal
+
+  const[openModal,setOpenModal]=React.useState(false);
+
   //ceate state for Tdods
  
 
@@ -68,6 +72,9 @@ function TodoProvider(props){
             searchedTodos,
             onCompletTodos,
             onDeleteTodos,
+            openModal,
+            setOpenModal,
+
         }}>
             {props.children}
         </TodoContext.Provider>
