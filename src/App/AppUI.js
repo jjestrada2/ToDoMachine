@@ -6,6 +6,7 @@ import TodoList from "../components/TodoList";
 import CreateTodoButton from "../components/CreateTodoButton";
 import TodoItem from "../components/TodoItem";
 import Modal from '../Modal';
+import TodoForm from '../components/TodoForm';
 
 export default function AppUI() {
 
@@ -44,7 +45,7 @@ export default function AppUI() {
             </TodoList> 
        { openModal && 
        (<Modal>
-         <p>holi</p>
+         <TodoForm/>
        </Modal>)}
        
        <CreateTodoButton
