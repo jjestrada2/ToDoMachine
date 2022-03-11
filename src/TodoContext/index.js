@@ -38,7 +38,14 @@ function TodoProvider(props){
     return todoText.includes(searchText);
   });
 
-  
+  const addTodo=(text)=>{
+    //create a new array of todos that storage a copy of the original array of todos
+    const newTodos=[...todos];
+    //modifi the new array to a cmoplete todo
+    newTodos.push({completed:false,text});
+    //rerender the new todoArray with the changes 
+    saveTodos(newTodos);
+  }
 
   //function to check Todos
   const onCompletTodos=(text)=>{
@@ -70,6 +77,7 @@ function TodoProvider(props){
             searchValue,
             setSearchValue,
             searchedTodos,
+            addTodo,
             onCompletTodos,
             onDeleteTodos,
             openModal,

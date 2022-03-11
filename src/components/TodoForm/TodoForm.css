@@ -1,0 +1,79 @@
+form{
+    width:90%;
+    max-width: 300px;
+    background-color: #fff;
+    padding: 33px 40px;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    border-radius: 25px;
+    background: linear-gradient(0deg, rgba(34,159,195,1) 0%, rgba(79,45,253,1) 100%);
+
+}
+
+label{
+    text-align: center;
+    font-weight: bold;
+    font-size: #1e1e1e;
+    margin-bottom: 26px;
+}
+
+textarea{
+    background-color: #F9FBFC;
+    border:2px, solid #202329;
+    border-radius: 25px;
+    box-shadow: 0px 5px 50px rgba(32,35, 42, 0.25);
+    color:#1E1E1F;
+    font-size: 20px;
+    text-align: center;
+    padding: 12px;
+    height:96px;
+    width: calc(100%-25px);
+    
+
+}
+
+textarea::placeholder{
+    color: #a5a5a5;
+    font-family:'Audiowide', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    font-weight: 400;
+}
+
+textarea:focus{
+    outline-color: rgb(34,159,195);
+}
+
+.buttonContainer{
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+button{
+    cursor:pointer;
+    display: inline-block;
+    font-size: 20px;
+    color:#202329;
+    font-weight: 400;
+    width: 120px;
+    height: 48px;
+    border-radius: 25px;
+    border: none;
+    font-family: 'Audiowide', 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.todoButtonAdd{
+    background-color: #61DAFA;
+    box-shadow: 0px 5px 25px rgba(97,218,250,0.5);
+}
+
+.todoButtonCancel{
+    background-color: rgba(80, 45, 253, 0.356);
+    box-shadow: 0px 5px 25px rgba(97,218,250,0.5);
+}
