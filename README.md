@@ -34,6 +34,7 @@ npm run test
 
 * Website: https://juanjoseestrada.com
 * Github: [@jjestrada2](https://github.com/jjestrada2)
+* Project: https://jjestrada2.github.io/ToDoMachine/
 
 ## Show your support
 
