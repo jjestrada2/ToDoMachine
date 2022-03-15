@@ -7,6 +7,9 @@ import CreateTodoButton from "../components/CreateTodoButton";
 import TodoItem from "../components/TodoItem";
 import Modal from '../Modal';
 import TodoForm from '../components/TodoForm';
+import EmptyTodo from '../components/EmptyTodo';
+import TodoError from '../components/TodoError';
+import TodoLoading from '../components/TodoLoading'
 
 export default function AppUI() {
 
@@ -28,9 +31,9 @@ export default function AppUI() {
 
        
             <TodoList >
-            {error&&<p>Error</p>}
-            {loading&&<p>Loading wait a minute</p>}
-            {(!loading && !searchedTodos.length )&&<p>Creat your first todo</p>}
+            {error&&<TodoError error={error}/>}
+            {loading&&<TodoLoading/>}
+            {(!loading && !searchedTodos.length )&&<EmptyTodo/>}
   
            {searchedTodos.map(todo =>(
              <TodoItem 
