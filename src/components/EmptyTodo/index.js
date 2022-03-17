@@ -1,7 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Image from "../../assets/money.png";
+import "./EmptyToDo.css";
 
 export default function EmptyTodo() {
   return (
-    <div>EmptyTodo</div>
+    <div>
+      <img src={Image}/>
+      
+
+    </div>
   )
 }
