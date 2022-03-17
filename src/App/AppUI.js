@@ -32,7 +32,7 @@ export default function AppUI() {
        
             <TodoList >
             {error&&<TodoError error={error}/>}
-            {loading&&<TodoLoading/>}
+            {loading && new Array(3).fill(1).map((a, i) => <TodoLoading key={i} />)}
             {(!loading && !searchedTodos.length )&&<EmptyTodo/>}
   
            {searchedTodos.map(todo =>(

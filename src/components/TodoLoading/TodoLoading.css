@@ -35,25 +35,25 @@
 
 .LoadingCompleteIcon{
     position: absolute;
-    left: 20px;
+    left: 12px;
 }
 
 
 .LoadingDeleteIcon{
     position:absolute;
-    right: 0;
+    top: -24px;
 }
 
 .LoadingContainer,
 .LoadingCompleteIcon,
 .LoadingDeleteIcon{
-background: radial-gradient(90deg,rgba(250,250,250,2),rgb(200,199,199));
+background: linear-gradient(90deg ,rgba(250,250,250,2),rgb(95, 122, 241));
 background-size: 400% 400%;
 animation: loadingAnimation 3s ease-in-out infinite;
 }
 
 
-@keyframes LoadingAnimation {
+@keyframes loadingAnimation {
     0%{
         background-position: 0% 50%;
     }
