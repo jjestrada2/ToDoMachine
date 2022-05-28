@@ -7,6 +7,10 @@
 </p>
 
 > This is a project bult it in react.js, is an app to help people to make list of the things that they havr to do intheir day.
+> In this project, I develop a traditional to-do machine using Local Storage to persist the data, also I use the ReactJS state to implement a search "To Do" input.
+
+<img width="562" alt="Screen Shot 2022-05-28 at 11 06 09 AM" src="https://user-images.githubusercontent.com/69777842/170837750-50bccce9-d4d9-4de2-a7fe-939c8ec8a022.png">
+
 
 ### 🏠 [Homepage](https://jjestrada2.github.io/ToDoMachine)
 
