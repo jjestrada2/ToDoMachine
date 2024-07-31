@@ -1,48 +1,76 @@
-<h1 align="center">Welcome to todomachine 👋</h1>
-<p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.1.0-blue.svg?cacheSeconds=2592000" />
-  <a href="#" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
-  </a>
-</p>
+# To-Do Machine 📚✔️
 
-> This is a project bult it in react.js, is an app to help people to make list of the things that they havr to do intheir day.
-> In this project, I develop a traditional to-do machine using Local Storage to persist the data, also I use the ReactJS state to implement a search "To Do" input.
+A to-do list application built with React.js to help users organize their daily tasks. This project uses Local Storage to persist data and ReactJS state to implement a search "To Do" input.
+* Demo : https://jjestrada2.github.io/ToDoMachine/
 
-<img width="562" alt="Screen Shot 2022-05-28 at 11 06 09 AM" src="https://user-images.githubusercontent.com/69777842/170837750-50bccce9-d4d9-4de2-a7fe-939c8ec8a022.png">
+## Table of Contents🤗
+1. [Description](#description)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Features](#features)
+5. [Contributing](#contributing)
+6. [License](#license)
+7. [Credits](#credits)
+8. [Contact](#contact)
 
+## Description🙌
 
-### 🏠 [Homepage](https://jjestrada2.github.io/ToDoMachine)
+The To-Do Machine is designed to help users keep track of their tasks. It allows users to add, edit, delete, and search tasks. The application stores the to-do list in Local Storage, so the data persists even after the browser is closed or refreshed.
 
-## Install
+## Installation🐢
 
-```sh
-npm install
-```
+To get a local copy up and running, follow these simple steps:
 
-## Usage
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/jjestrada2/ToDoMachine.git
+    ```
 
-```sh
-npm run start
-```
+2. **Navigate to the project directory:**
+    ```bash
+    cd ToDoMachine
+    ```
 
-## Run tests
+3. **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-```sh
-npm run test
-```
+4. **Start the development server:**
+    ```bash
+    npm start
+    ```
 
-## Author
+5. **Open the project in your web browser:**
+    - Go to `http://localhost:3000/`
 
-👤 **Juan Jose Estrdada**
+## Usage🎮
 
-* Website: https://juanjoseestrada.com
-* Github: [@jjestrada2](https://github.com/jjestrada2)
-* Project: https://jjestrada2.github.io/ToDoMachine/
+1. **Add Tasks**: Enter a task in the input field and click "Add" to add it to the list.
+2. **Edit Tasks**: Click on a task to edit its details.
+3. **Delete Tasks**: Click on the delete icon next to a task to remove it from the list.
+4. **Search Tasks**: Use the search input to filter tasks by name.
 
-## Show your support
+## Features🦸‍♂️
 
-Give a ⭐️ if this project helped you!
+- Add, edit, and delete tasks.
+- Persist data using Local Storage.
+- Search tasks using the search input.
+- Responsive design for compatibility with various devices.
 
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+## Contributing🙇‍♂️
+
+If you would like to contribute to this project, please fork the repository and create a pull request with your changes. Contributions are always welcome!
+
+## License📜
+
+This project is licensed under the MIT License - see the [LICENSE](https://choosealicense.com/licenses/mit/) file for details.
+
+## Credits
+
+- [React](https://reactjs.org/) - JavaScript library for building user interfaces.
+- [Juan Estrada](https://github.com/jjestrada2) - Developer of this project.
+
+## Contact🦻
+
+For support or inquiries, please contact [Juan Estrada](mailto:Juan5801331@gmail.com).
